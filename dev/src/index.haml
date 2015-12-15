@@ -1,0 +1,18 @@
+!!! 5
+%html{ :lang=> 'en' }
+  %head
+    %meta{ :charset => 'utf-8' }
+    %link{ :href => 'https://fonts.googleapis.com/css?family=Open+Sans', :rel => 'stylesheet' }
+    %link{ :href => 'css/main.css', :rel => 'stylesheet' }
+    %title= 'Daniel Meana Llorián - Index'
+  %body
+    %section#welcome
+      .center-wrapper
+        .card
+          %img.photo{ :src => 'https://lh3.googleusercontent.com/7c4na51r1Km9UNjs6fvoti7oYZhf6JF5n4bszDNTduCfnH0Iij65TLwf64i0BCZShQuJ=w438-h436-p-no' }
+          .description
+            %p.name= 'Daniel Meana LLorián'
+            %p.location= 'Asturias, Spain'
+            %p.location= 'Researcher at University of Oviedo'
+            %p.contact
+              %a{ :href => 'mailto:danielmeanallorian@gmail.com' }= 'danielmeanallorian@gmail.com'

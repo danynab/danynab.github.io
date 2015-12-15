@@ -1,0 +1,58 @@
+$font: 'Open Sans', sans-serif;
+$primary-color: #e74c3c;
+$secondy-color: #c0392b;
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  font-family: $font;
+  background: $primary-color;
+}
+section#welcome {
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  .center-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px #333;
+      margin: auto;
+      width: 450px;
+      height: 160px;
+      .photo {
+        border-radius: 50%;
+        float: left;
+        padding: 20px;
+        width: 120px;
+      }
+      .description {
+        padding: 20px;
+        .name {
+          font-weight: bold;
+          font-size: 1.5em;
+        }
+        .contact {
+          padding-top: 10px;
+          a {
+            color: $primary-color;
+            text-decoration: none;
+          }
+          a:hover {
+            color: $secondy-color;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
