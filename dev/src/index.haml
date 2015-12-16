@@ -2,18 +2,24 @@
 %html{ :lang=> 'en' }
   %head
     %meta{ :charset => 'utf-8' }
+    %meta{ :name => 'viewport', :content => 'initial-scale=1, maximum-scale=1' }
+    %link{ :rel => 'stylesheet', :href => 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' }
     %link{ :href => 'https://fonts.googleapis.com/css?family=Open+Sans', :rel => 'stylesheet' }
     %link{ :href => 'css/main.css', :rel => 'stylesheet' }
     %title= 'Daniel Meana Llorián - Index'
   %body
-    %section#welcome
-      .center-wrapper
-        .card
-          %img.photo{ :src => 'https://lh3.googleusercontent.com/7c4na51r1Km9UNjs6fvoti7oYZhf6JF5n4bszDNTduCfnH0Iij65TLwf64i0BCZShQuJ=w438-h436-p-no' }
-          .description
-            %p.name= 'Daniel Meana LLorián'
-            %p.location= 'Asturias, Spain'
-            %p.location= 'Researcher at University of Oviedo'
-            %p.contact
-              %a{ :href => 'mailto:danielmeanallorian@gmail.com' }= 'danielmeanallorian@gmail.com'
-        %p.joke= '¯\_(ツ)_/¯'
+    %header{ :itemscope => '', :itemtype => 'http://schema.org/Person' }
+      .content
+        %img.photo{ :itemprop => 'image', :src => 'https://lh3.googleusercontent.com/7c4na51r1Km9UNjs6fvoti7oYZhf6JF5n4bszDNTduCfnH0Iij65TLwf64i0BCZShQuJ=w438-h436-p-no' }
+        %p.name{ :itemprop => 'name' }= 'Daniel Meana LLorián'
+        %p.location{ :itemprop => 'address' }= 'Asturias, Spain'
+        %p.location
+          %span{ :itemprop => 'jobTitle' }='Researcher'
+          at
+          %span{ :itemprop => 'affiliation' }='University of Oviedo'
+        %p.contact
+          %a{ :itemprop => 'email', :href => 'mailto:danielmeanallorian@gmail.com' }= 'danielmeanallorian@gmail.com'
+      %button.next= 'More'
+    %main
+    %footer.welcome
+      %p= '&copy; 2015 Daniel Meana Llorián'

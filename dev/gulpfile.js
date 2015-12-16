@@ -54,7 +54,9 @@ gulp.task('build-css', function() {
 gulp.task('build-haml', function() {
   return gulp.src('src/**/*.haml')
     .pipe(sourcemaps.init())
-    .pipe(haml())
+    .pipe(haml().on('error', function(err) {
+      console.log(err.message);
+    }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('..'))
     .pipe(livereload());
